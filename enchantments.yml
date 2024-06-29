@@ -1,0 +1,1748 @@
+finalwish:
+  display: '%group-color%Final Wish'
+  description: 'Inflicts temporary weakness on whoever kills you'
+  applies-to: 'Helmet'
+  group: 'simple'
+  type: 'DEFENSE;DEFENSE_PROJECTILE'
+  applies:
+    - 'ALL_HELMET'
+  levels:
+    '1':
+      chance: 100
+      conditions:
+        - '%victim health% = 0 : %allow%'
+      effects:
+        - 'POTION:WEAKNESS:0:100 @Attacker'
+saturation:
+  display: '%group-color%Saturation'
+  description: 'Chance to gain saturation while killing mobs and mining blocks'
+  applies-to: 'Helmet'
+  group: 'elite'
+  type: 'MINING;KILL_MOB'
+  applies:
+    - 'ALL_HELMET'
+  levels:
+    '1':
+      chance: 15
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number>'
+    '2':
+      chance: 25
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number>'
+    '3':
+      chance: 35
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number>'
+    '4':
+      chance: 50
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number>'
+    '5':
+      chance: 60
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number>'
+    '6':
+      chance: 75
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number>'
+stamina:
+  display: '%group-color%Stamina'
+  description: "Lose less hunger overtime"
+  applies-to: 'Helmet'
+  type: 'REPEATING'
+  time: 3
+  group: 'legendary'
+  applies:
+    - ALL_HELMET
+  levels:
+    1:
+      cooldown: 15
+      effects:
+        - 'ADD_FOOD:<random number>1-2</random number>'
+    2:
+      cooldown: 15
+      effects:
+        - 'ADD_FOOD:<random number>2-3</random number>'
+enrage:
+  display: '%group-color%Enrage'
+  description: 'Chance to gain Speed 3 when hit'
+  applies-to: 'Helmet'
+  group: 'elite'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE'
+  applies:
+    - 'ALL_HELMET'
+  levels:
+    '1':
+      chance: 0.5
+      cooldown: 35
+      effects:
+        - 'POTION:SPEED:2:80'
+    '2':
+      chance: 0.9
+      cooldown: 35
+      effects:
+        - 'POTION:SPEED:2:140'
+    '3':
+      chance: 1.5
+      cooldown: 35
+      effects:
+        - 'POTION:SPEED:2:200'
+infernal:
+  display: '%group-color%Infernal'
+  description: |-
+    When hit you have a chance to spawn 4 minions
+    to help u pvp
+  applies-to: Helmet
+  type: DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE
+  group: elite
+  applies:
+    - ALL_HELMET
+  levels:
+    '1':
+      chance: 3
+      cooldown: 10
+      effects:
+        - GUARD:VEX:25:4:&f&l%victim name% Minion:@Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Infernal &7enchant has summoned {#00FB8A}4 Infernal Vexs &7to assist you! @Victim
+    '2':
+      chance: 4
+      cooldown: 10
+      effects:
+        - GUARD:VEX:25:4:&f&l%victim name% Minion:@Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Infernal &7enchant has summoned {#00FB8A}4 Infernal Vexs &7to assist you! @Victim
+    '3':
+      chance: 5
+      cooldown: 10
+      effects:
+        - GUARD:VEX:25:4:&f&l%victim name% Minion:@Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Infernal &7enchant has summoned {#00FB8A}4 Infernal Vexs &7to assist you! @Victim
+    '4':
+      chance: 6
+      cooldown: 10
+      effects:
+        - GUARD:VEX:25:4:&f&l%victim name% Minion:@Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Infernal &7enchant has summoned {#00FB8A}4 Infernal Vexs &7to assist you! @Victim
+    '5':
+      chance: 7
+      cooldown: 10
+      effects:
+        - GUARD:VEX:25:4:&f&l%victim name% Minion:@Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Infernal &7enchant has summoned {#00FB8A}4 Infernal Vexs &7to assist you! @Victim
+    '6':
+      chance: 8
+      cooldown: 10
+      effects:
+        - GUARD:VEX:25:4:&f&l%victim name% Minion:@Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Infernal &7enchant has summoned {#00FB8A}4 Infernal Vexs &7to assist you! @Victim
+    '7':
+      chance: 9
+      cooldown: 10
+      effects:
+        - GUARD:VEX:25:4:&f&l%victim name% Minion:@Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Infernal &7enchant has summoned {#00FB8A}4 Infernal Vexs &7to assist you! @Victim
+    '8':
+      chance: 10
+      cooldown: 10
+      effects:
+        - GUARD:VEX:25:4:&f&l%victim name% Minion:@Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Infernal &7enchant has summoned {#00FB8A}4 Infernal Vexs &7to assist you! @Victim
+demonic:
+    display: "%group-color%Demonic"
+    description: "Chance to remove fire resistance from player when hit"
+    applies-to: "Helmet"
+    type: "DEFENSE;DEFENSE_PROJECTILE"
+    group: "legendary"
+    applies:
+      - ALL_HELMET
+    levels:
+      1:
+        cooldown: 3
+        chance: 3
+        conditions:
+          - '%victim has potion effect FIRE_RESISTANCE% = true : %allow%'
+        effects:
+          - "CURE:FIRE_RESISTANCE @Attacker"
+          - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Demonic &7enchant has removed {#00FB8A}Fire Resistance&7 from &c%attacker name%&7! @Victim
+          - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% {#00FB8A}Demonic &7enchant has removed your {#00FB8A}Fire Resistance&7! @Attacker
+      2:
+        cooldown: 3
+        chance: 5
+        conditions:
+          - '%victim has potion effect FIRE_RESISTANCE% = true : %allow%'
+        effects:
+          - "CURE:FIRE_RESISTANCE @Attacker"
+          - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Demonic &7enchant has removed {#00FB8A}Fire Resistance&7 from &c%attacker name%&7! @Victim
+          - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% {#00FB8A}Demonic &7enchant has removed your {#00FB8A}Fire Resistance&7! @Attacker
+      3:
+        cooldown: 3
+        chance: 8
+        conditions:
+          - '%victim has potion effect FIRE_RESISTANCE% = true : %allow%'
+        effects:
+          - "CURE:FIRE_RESISTANCE @Attacker"
+          - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Demonic &7enchant has removed {#00FB8A}Fire Resistance&7 from &c%attacker name%&7! @Victim
+          - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% {#00FB8A}Demonic &7enchant has removed your {#00FB8A}Fire Resistance&7! @Attacker
+glowing:
+    display: "%group-color%Glowing"
+    description: "Perm Night vision"
+    applies-to: "Helmet"
+    type: "EFFECT_STATIC"
+    group: "SIMPLE"
+    applies:
+      - ALL_HELMET
+    levels:
+      1:
+        chance: 100
+        effects:
+          - "POTION:NIGHT_VISION:0:999999"
+juggernaut:
+  display: '%group-color%Juggernaut'
+  description: 'Perm Resistance'
+  applies-to: 'Chestplate'
+  group: 'LEGENDARY'
+  type: 'EFFECT_STATIC'
+  applies:
+    - 'ALL_CHESTPLATE'
+  levels:
+    '1':
+      effects:
+        - 'POTION:RESISTANCE:0'
+    '2':
+      effects:
+        - 'POTION:RESISTANCE:1'
+enhance:
+  display: '%group-color%Enhance'
+  description: 'When eating a golden apple u gain more apsorption level'
+  applies-to: 'Chestplate'
+  type: 'EAT'  
+  group: 'elite'
+  applies:
+    - 'ALL_CHESTPLATE'  
+  levels:
+    '1':
+      conditions:
+        - '%player is holding% contains GOLDEN_APPLE : %allow%'
+      effects:
+        - 'POTION:ABSORPTION:1:2400'
+    '2':
+      conditions:
+        - '%player is holding% contains GOLDEN_APPLE : %allow%'    
+      effects:
+        - 'POTION:ABSORPTION:2:2400'
+fumble:
+  display: '%group-color%Fumble'
+  description: 'Chance to explode enemy when hit by their arrows'
+  applies-to: 'Chestplate'
+  type: 'DEFENSE_PROJECTILE'
+  group: 'ELITE'
+  applies:
+    - ALL_CHESTPLATE
+  levels:
+    '1':
+      chance: 10
+      cooldown: 5
+      effects:
+        - 'TNT:1 @Attacker'
+        - 'PLAY_SOUND:ENCHANT_THORNS_HIT:1:1 @Attacker'
+    '2':
+      chance: 15
+      cooldown: 5
+      effects:
+        - 'TNT:1 @Attacker'
+        - 'PLAY_SOUND:ENCHANT_THORNS_HIT:1:1 @Attacker'
+    '3':
+      chance: 25
+      cooldown: 5
+      effects:
+        - 'TNT:1 @Attacker'
+        - 'PLAY_SOUND:ENCHANT_THORNS_HIT:1:1 @Attacker'
+    '4':
+      chance: 45
+      cooldown: 5
+      effects:
+        - 'TNT:1 @Attacker'
+        - 'PLAY_SOUND:ENCHANT_THORNS_HIT:1:1 @Attacker'
+reinforced:
+  display: '%group-color%Reinforced'
+  description: 'Chance to take Reduced Damage from behind'
+  applies-to: 'Chestplate'
+  group: 'ELITE'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE'
+  applies:
+    - 'ALL_CHESTPLATE'
+  levels:
+    '1':
+      chance: 4
+      cooldown: 5
+      condition:
+        - '%damaged from behind% : %continue%'
+      effects:
+        - 'NEGATE_DAMAGE:<random number>10-35</random number>'
+    '2':
+      chance: 6
+      cooldown: 5
+      condition:
+        - '%damaged from behind% : %continue%'
+      effects:
+        - 'NEGATE_DAMAGE:<random number>10-35</random number>'
+    '3':
+      chance: 8
+      cooldown: 5
+      condition:
+        - '%damaged from behind% : %continue%'
+      effects:
+        - 'NEGATE_DAMAGE:<random number>10-35</random number>'
+    '4':
+      chance: 10
+      cooldown: 5
+      condition:
+        - '%damaged from behind% : %continue%'
+      effects:
+        - 'NEGATE_DAMAGE:<random number>10-35</random number>'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Backstabed &c%victim name%&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% {#00FB8A}Backstabed &7you! @Victim
+curse:
+  display: '&eCurse'
+  description: "Curse your enemy, dealing\ndamage over time"
+  applies-to: 'Chestplate'
+  type: 'DEFENSE;DEFENSE_PROJECTILE'
+  group: 'elite'
+  applies:
+    - ALL_CHESTPLATE
+  levels:
+    1:
+      chance: 0.65
+      cooldown: 5
+      effects:
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Cursed &c%attacker name%&7! @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% {#00FB8A}Cursed&7 you! @Attacker
+        - 'DO_HARM:1 @Attacker'
+        - 'WAIT:40'
+        - 'DO_HARM:1 @Attacker'
+        - 'WAIT:20'
+        - 'DO_HARM:2 @Attacker'
+    2:
+      chance: 0.8
+      cooldown: 5
+      effects:
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Cursed &c%attacker name%&7! @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% {#00FB8A}Cursed&7 you! @Attacker
+        - 'DO_HARM:1 @Attacker'
+        - 'WAIT:40'
+        - 'DO_HARM:1 @Attacker'
+        - 'WAIT:20'
+        - 'DO_HARM:2 @Attacker'
+    3:
+      chance: 1
+      cooldown: 5
+      effects:
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Cursed &c%attacker name%&7! @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% {#00FB8A}Cursed&7 you! @Attacker
+        - 'DO_HARM:1 @Attacker'
+        - 'WAIT:40'
+        - 'DO_HARM:1 @Attacker'
+        - 'WAIT:20'
+        - 'DO_HARM:2 @Attacker'
+    4:
+      chance: 2
+      cooldown: 5
+      effects:
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Cursed &c%attacker name%&7! @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% {#00FB8A}Cursed&7 you! @Attacker
+        - 'DO_HARM:1 @Attacker'
+        - 'WAIT:40'
+        - 'DO_HARM:1 @Attacker'
+        - 'WAIT:20'
+        - 'DO_HARM:2 @Attacker'
+    5:
+      chance: 4
+      cooldown: 5
+      effects:
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Cursed &c%attacker name%&7! @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% {#00FB8A}Cursed&7 you! @Attacker
+        - 'DO_HARM:1 @Attacker'
+        - 'WAIT:40'
+        - 'DO_HARM:1 @Attacker'
+        - 'WAIT:20'
+        - 'DO_HARM:2 @Attacker'
+    6:
+      chance: 6
+      cooldown: 5
+      effects:
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Cursed &c%attacker name%&7! @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% {#00FB8A}Cursed&7 you! @Attacker
+        - 'DO_HARM:12 @Attacker'
+        - 'WAIT:40'
+        - 'DO_HARM:12 @Attacker'
+        - 'WAIT:20'
+        - 'DO_HARM:16 @Attacker'
+refelct:
+  display: '%group-color%Reflect'
+  description: 'Chance for your enemy to receive partial damage of their own attack'
+  applies-to: 'Chestplate'
+  group: 'legendary'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE'
+  applies:
+    - 'ALL_CHESTPLATE'
+  levels:
+    '1':
+      chance: 0.7
+      cooldown: 5
+      effects:
+        - 'DO_HARM:4 @Attacker'
+    '2':
+      chance: 0.9
+      cooldown: 5
+      effects:
+        - 'DO_HARM:6 @Attacker'
+    '3':
+      chance: 1.2
+      cooldown: 5
+      effects:
+        - 'DO_HARM:8 @Attacker'
+    '4':
+      chance: 1.5
+      cooldown: 5
+      effects:
+        - 'DO_HARM:10 @Attacker'
+    '5':
+      chance: 1.7
+      cooldown: 5
+      effects:
+        - 'DO_HARM:12 @Attacker'
+valiant:
+  display: '%group-color%Valiant'
+  description: 'Take reduced damage from your enemies'
+  applies-to: 'Chestplate'
+  group: 'legendary'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE'
+  applies:
+    - 'ALL_CHESTPLATE'
+  levels:
+    '1':
+      chance: 3
+      cooldown: 4
+      effects:
+        - 'DECREASE_DAMAGE:15 @Attacker'
+    '2':
+      chance: 5
+      cooldown: 4
+      effects:
+        - 'DECREASE_DAMAGE:15 @Attacker'
+    '3':
+      chance: 7
+      cooldown: 4
+      effects:
+        - 'DECREASE_DAMAGE:15 @Attacker'
+    '4':
+      chance: 11
+      cooldown: 4
+      effects:
+        - 'DECREASE_DAMAGE:15 @Attacker'
+    '5':
+      chance: 11
+      cooldown: 3
+      effects:
+        - 'DECREASE_DAMAGE:15 @Attacker'
+heavy:
+  display: '%group-color%Heavy'
+  description: 'Decreases damage from enemy bows'
+  applies-to: 'LEGGINGS'
+  group: 'Legendary'
+  type: 'DEFENSE_PROJECTILE'
+  applies:
+    - ALL_LEGGINGS
+  levels:
+    '1':
+      chance: 4
+      cooldown: 3
+      conditions:
+        - '%attacker is holding% = BOW : %allow%'
+      effects:
+        - 'DECREASE_DAMAGE:2 @Attacker'
+    '2':
+      chance: 9
+      cooldown: 3
+      conditions:
+        - '%attacker is holding% = BOW : %allow%'
+      effects:
+        - 'DECREASE_DAMAGE:4 @Attacker'
+    '3':
+      chance: 12
+      cooldown: 3
+      conditions:
+        - '%attacker is holding% = BOW : %allow%'
+      effects:
+        - 'DECREASE_DAMAGE:6 @Attacker'
+    '4':
+      chance: 16
+      cooldown: 3
+      conditions:
+        - '%attacker is holding% = BOW : %allow%'
+      effects:
+        - 'DECREASE_DAMAGE:8 @Attacker'
+    '5':
+      chance: 21
+      cooldown: 3
+      conditions:
+        - '%attacker is holding% = BOW : %allow%'
+      effects:
+        - 'DECREASE_DAMAGE:10 @Attacker'
+shockwave:
+  display: '%group-color%Shockwave'
+  description: 'Boost Nearby players in air when at 4 hearts'
+  applies-to: 'Leggings'
+  group: 'ELITE'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE'
+  applies:
+    - 'ALL_LEGGINGS'
+  levels:
+    '1':
+      chance: 50
+      cooldown: 5
+      conditions:
+        - '%victim health% > 8 : %stop%'
+      effectss:
+        - 'BOOST:UP:175 @Aoe{radius=7,target=all}'
+        - 'MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Shockwave &7enchant has activated! @Victim'
+    '2':
+      chance: 100
+      cooldown: 5
+      conditions:
+        - '%victim health% > 8 : %stop%'
+      effects:
+        - 'BOOST:UP:175 @Aoe{radius=7,target=all}'
+        - 'MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Shockwave &7enchant has activated! @Victim'
+evade:
+  display: '%group-color%Evade'
+  description: 'Chance to evade arrows when shot at'
+  applies-to: 'LEGGINGS'
+  type: 'DEFENSE_PROJECTILE;DEFENSE_MOB_PROJECTILE'
+  group: 'ELITE'
+  applies:
+    - ALL_LEGGINGS
+  levels:
+    '1':
+      chance: 15
+      cooldown: 10
+      effects:
+        - 'STOP_ATTACK'
+        - 'IGNORE_ARMOR_DAMAGE @Victim'
+    '2':
+      chance: 25
+      cooldown: 10
+      effects:
+        - 'STOP_ATTACK'
+        - 'IGNORE_ARMOR_DAMAGE @Victim'
+    '3':
+      chance: 35
+      cooldown: 10
+      effects:
+        - 'STOP_ATTACK'
+        - 'IGNORE_ARMOR_DAMAGE @Victim'
+    '4':
+      chance: 45
+      cooldown: 8
+      effects:
+        - 'STOP_ATTACK'
+        - 'IGNORE_ARMOR_DAMAGE @Victim'
+phoenix:
+  display: '%group-color%Phoenix'
+  description: 'Chance to deal more damage while on fire'
+  applies-to: 'Leggings'
+  type: 'FIRE'
+  group: 'elite'
+  applies:
+    - ALL_LEGGINGS
+  levels:
+    '1':
+      chance: 0.5
+      conditions:
+        - '%is on fire% = TRUE : %allow%'
+      effects:
+        - 'INCREASE_DAMAGE:0.2'
+    '2':
+      chance: 0.7
+      conditions:
+        - '%is on fire% = TRUE : %allow%'
+      effects:
+        - 'INCREASE_DAMAGE:0.5'
+    '3':
+      chance: 1.2
+      conditions:
+        - '%is on fire% = TRUE : %allow%'
+      effects:
+        - 'NEGATE_DAMAGE:0.8'
+    '4':
+      chance: 1.45
+      conditions:
+        - '%is on fire% = TRUE : %allow%'
+      effects:
+        - 'NEGATE_DAMAGE:1.1'
+loki:
+  display: '%group-color%Loki'
+  description: 'Chance to give a player Nausea when hit'
+  applies-to: 'Leggings'
+  group: 'ELITE'
+  type: 'DEFENSE'
+  applies:
+    - 'ALL_LEGGINGS'
+  levels:
+    '1':
+      chance: 0.1
+      cooldown: 5
+      effects:
+        - 'POTION:NAUSEA:0:100 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Loki &7enchant gave &c%attacker name% {#00FB8A}Nausea&7! @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% &7gave you {#00FB8A}Nausea&7 with the enchant {#00FB8A}Loki&7! @Attacker
+    '2':
+      chance: 0.3
+      cooldown: 5
+      effects:
+        - 'POTION:NAUSEA:0:100 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Loki &7enchant gave &c%attacker name% {#00FB8A}Nausea&7! @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% &7gave you {#00FB8A}Nausea&7 with the enchant {#00FB8A}Loki&7! @Attacker
+    '3':
+      chance: 0.7
+      cooldown: 5
+      effects:
+        - 'POTION:NAUSEA:0:100 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Loki &7enchant gave &c%attacker name% {#00FB8A}Nausea&7! @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%victim name% &7gave you {#00FB8A}Nausea&7 with the enchant {#00FB8A}Loki&7! @Attacker
+toxicspore:
+  display: '%group-color%Toxic Spore'
+  description: 'Chance to give nearby enemies Poison for a few seconds when hit'
+  applies-to: 'Leggings'
+  group: 'ELITE'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE'
+  applies:
+    - 'ALL_LEGGINGS'
+  levels:
+    '1':
+      chance: 0.4
+      cooldown: 10
+      effectss:
+        - 'POTION:POISON:0:100 @Aoe{radius=7,target=all}'
+    '2':
+      chance: 0.6
+      cooldown: 10
+      effects:
+        - 'POTION:POISON:0:100 @Aoe{radius=7,target=all}'
+    '3':
+      chance: 0.8
+      cooldown: 10
+      effects:
+        - 'POTION:POISON:0:100 @Aoe{radius=7,target=all}'
+    '4':
+      chance: 1
+      cooldown: 10
+      effects:
+        - 'POTION:POISON:0:100 @Aoe{radius=7,target=all}'
+    '5':
+      chance: 1.3
+      cooldown: 10
+      effects:
+        - 'POTION:POISON:0:100 @Aoe{radius=7,target=all}'
+    '6':
+      chance: 1.5
+      cooldown: 10
+      effects:
+        - 'POTION:POISON:0:100 @Aoe{radius=7,target=all}'
+    '7':
+      chance: 1.7
+      cooldown: 10
+      effects:
+        - 'POTION:POISON:0:100 @Aoe{radius=7,target=all}'
+porcupine:
+  display: '%group-color%Porcupine'
+  description: 'Chance to shoot random arrows out of you in every direction when hit'
+  applies-to: 'Leggings'
+  group: 'ELITE'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE'
+  applies:
+    - 'ALL_LEGGINGS'
+  levels:
+    '1':
+      chance: 0.6
+      cooldown: 15
+      effectss:
+        - 'PROJECTILE:ARROW @Aoe{radius=24,target=all}'
+    '2':
+      chance: 0.95
+      cooldown: 15
+      effectss:
+        - 'PROJECTILE:ARROW @Aoe{radius=24,target=all}'
+    '3':
+      chance: 1.25
+      cooldown: 15
+      effectss:
+        - 'PROJECTILE:ARROW @Aoe{radius=24,target=all}'
+    '4':
+      chance: 2.34
+      cooldown: 15
+      effectss:
+        - 'PROJECTILE:ARROW @Aoe{radius=24,target=all}'
+    '5':
+      chance: 3
+      cooldown: 15
+      effectss:
+        - 'PROJECTILE:ARROW @Aoe{radius=24,target=all}'
+    '6':
+      chance: 4.65
+      cooldown: 15
+      effectss:
+        - 'PROJECTILE:ARROW @Aoe{radius=24,target=all}'
+speedswimmer:
+    display: "%group-color%Speed Swimmer"
+    description: "Allows you to swim faster while in water"
+    applies-to: "Boots"
+    type: "EFFECT_STATIC"
+    group: "SIMPLE"
+    applies:
+      - ALL_BOOTS
+    levels:
+      1:
+        chance: 100
+        effects:
+          - "POTION:dolphins_grace:0:999999"
+torrent:
+  display: '%group-color%Torrent'
+  description: 'Deal double damage while in water'
+  applies-to: 'Boots'
+  type: 'ATTACK;ATTACK_MOB'
+  group: 'ELITE'
+  applies:
+    - ALL_BOOTS
+  levels:
+    '1':
+      chance: 25
+      cooldown: 1
+      conditions:
+        - '%is under water% = TRUE : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE'
+    '2':
+      chance: 50
+      cooldown: 1
+      conditions:
+        - '%is under water% = TRUE : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE'
+    '3':
+      chance: 75
+      cooldown: 1
+      conditions:
+        - '%is under water% = TRUE : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE'
+    '4':
+      chance: 100
+      cooldown: 1
+      conditions:
+        - '%is under water% = TRUE : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE'
+hyper:
+  display: '%group-color%Hyper'
+  description: 'Gain permanent speed'
+  applies-to: 'Boots'
+  type: 'EFFECT_STATIC'
+  group: 'legendary'
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      effects:
+        - 'POTION:SPEED:0'
+    2:
+      effects:
+        - 'POTION:SPEED:1'
+extinguish:
+  display: '%group-color%Extinguish'
+  description: 'Reduced Damage in Fire/lava'
+  applies-to: 'Boots'
+  type: 'FIRE'
+  group: 'simple'
+  applies:
+    - ALL_BOOTS
+  levels:
+    '1':
+      chance: 100
+      conditions:
+        - '%is on fire% = TRUE : %allow%'
+      effects:
+        - 'NEGATE_DAMAGE:1'
+    '2':
+      chance: 100
+      conditions:
+        - '%is on fire% = TRUE : %allow%'
+      effects:
+        - 'NEGATE_DAMAGE:2'
+    '3':
+      chance: 100
+      conditions:
+        - '%is on fire% = TRUE : %allow%'
+      effects:
+        - 'NEGATE_DAMAGE:3'
+jellylegs:
+  display: '%group-color%Jelly Legs'
+  description: 'chance to remove slow falling'
+  applies-to: 'Boots'
+  type: 'DEFENSE'
+  group: 'legendary'
+  applies:
+    - ALL_BOOTS
+  levels:
+    '1':
+      chance: 7
+      cooldown: 5
+      conditions:
+        - '%has potion effect slow_falling% = TRUE : %allow%'
+      effects:
+        - 'CURE:SLOW_FALLING'
+    '2':
+      chance: 10
+      cooldown: 5
+      conditions:
+        - '%has potion effect slow_falling% = TRUE : %allow%'
+      effects:
+        - 'CURE:SLOW_FALLING'
+    '3':
+      chance: 13
+      cooldown: 5
+      conditions:
+        - '%has potion effect slow_falling% = TRUE : %allow%'
+      effects:
+        - 'CURE:SLOW_FALLING'
+miracle:
+  display: '%group-color%Miracle'
+  description: "Debuff your enimies when near death (3 min cooldown)"
+  applies-to: 'Boots'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE'
+  group: 'elite'
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      chance: 5
+      cooldown: 180
+      conditions:
+        - '%victim health% > 3 : %stop%'
+      effects:
+        - 'POTION:BLINDNESS:0:60 @Attacker'
+        - 'POTION:SLOW:0:60 @Attacker'
+        - 'POTION:SLOW_DIGGING:0:60 @Attacker'
+        - 'POTION:HUNGER:0:60 @Attacker'
+    2:
+      chance: 15
+      cooldown: 180
+      conditions:
+        - '%victim health% > 3 : %stop%'
+      effects:
+        - 'POTION:BLINDNESS:0:60 @Attacker'
+        - 'POTION:SLOW:0:60 @Attacker'
+        - 'POTION:SLOW_DIGGING:0:60 @Attacker'
+        - 'POTION:HUNGER:0:60 @Attacker'
+    3:
+      chance: 25
+      cooldown: 180
+      conditions:
+        - '%victim health% > 3 : %stop%'
+      effects:
+        - 'POTION:BLINDNESS:1:60 @Attacker'
+        - 'POTION:SLOW:1:60 @Attacker'
+        - 'POTION:SLOW_DIGGING:1:60 @Attacker'
+        - 'POTION:HUNGER:1:60 @Attacker'
+    4:
+      chance: 50
+      cooldown: 180
+      conditions:
+        - '%victim health% > 3 : %stop%'
+      effects:
+        - 'POTION:BLINDNESS:1:60 @Attacker'
+        - 'POTION:SLOW:1:60 @Attacker'
+        - 'POTION:SLOW_DIGGING:1:60 @Attacker'
+        - 'POTION:HUNGER:1:60 @Attacker'
+    5:
+      chance: 75
+      cooldown: 180
+      conditions:
+        - '%victim health% > 3 : %stop%'
+      effects:
+        - 'POTION:BLINDNESS:1:60 @Attacker'
+        - 'POTION:SLOW:1:60 @Attacker'
+        - 'POTION:SLOW_DIGGING:1:60 @Attacker'
+        - 'POTION:HUNGER:1:60 @Attacker'
+    6:
+      chance: 100
+      cooldown: 180
+      conditions:
+        - '%victim health% > 3 : %stop%'
+      effects:
+        - 'POTION:BLINDNESS:1:60 @Attacker'
+        - 'POTION:SLOW:1:60 @Attacker'
+        - 'POTION:SLOW_DIGGING:1:60 @Attacker'
+        - 'POTION:HUNGER:1:60 @Attacker'
+        - 'MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Miracle &7enchant has activated! @Victim'
+remedy:
+  display: '%group-color%Remedy'
+  description: 'Chance for wither or poison hearts to heal you'
+  applies-to: 'Boots'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE'
+  group: 'elite'
+  applies:
+    - ALL_BOOTS
+  levels:
+    '1':
+      chance: 6
+      cooldown: 5
+      conditions:
+        - '%has potion effect wither% = true  : %allow%'
+        - '%has potion effect poison% = true  : %allow%'
+      effects:
+        - 'CURE:WITHER @Victim'
+        - 'CURE:POISON @Victim'
+        - 'ADD_HEALTH:<random number>1-4</random number> @Victim'
+    '2':
+      chance: 9
+      cooldown: 5
+      conditions:
+        - '%has potion effect wither% = true  : %allow% = TRUE : %allow%'
+        - '%has potion effect poison% = true  : %allow% = TRUE : %allow%'
+      effects:
+        - 'CURE:WITHER @Victim'
+        - 'CURE:POISON @Victim'
+        - 'ADD_HEALTH:<random number>1-4</random number> @Victim'
+    '3':
+      chance: 12
+      cooldown: 5
+      conditions:
+        - '%has potion effect wither% = true  : %allow% = TRUE : %allow%'
+        - '%has potion effect poison% = true  : %allow% = TRUE : %allow%'
+      effects:
+        - 'CURE:WITHER @Victim'
+        - 'CURE:POISON @Victim'
+        - 'ADD_HEALTH:<random number>1-4</random number> @Victim'
+    '4':
+      chance: 13
+      cooldown: 5
+      conditions:
+        - '%has potion effect wither% = true  : %allow% = TRUE : %allow%'
+        - '%has potion effect poison% = true  : %allow% = TRUE : %allow%'
+      effects:
+        - 'CURE:WITHER @Victim'
+        - 'CURE:POISON @Victim'
+        - 'ADD_HEALTH:<random number>1-4</random number> @Victim'
+    '5':
+      chance: 15
+      cooldown: 5
+      conditions:
+        - '%has potion effect wither% = true  : %allow% = TRUE : %allow%'
+        - '%has potion effect poison% = true  : %allow% = TRUE : %allow%'
+      effects:
+        - 'CURE:WITHER @Victim'
+        - 'CURE:POISON @Victim'
+        - 'ADD_HEALTH:<random number>1-4</random number> @Victim'
+vitalize:
+  display: '%group-color%Vitalize'
+  description: "A chance to gain strength and speed\nafter player kills"
+  applies-to: 'Boots'
+  type: 'KILL_PLAYER'
+  group: 'legendary'
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      chance: 25
+      cooldown: 3
+      effects:
+        - 'POTION:INCREASE_DAMAGE:0:80 @Attacker'
+        - 'POTION:SPEED:0:80 @Attacker'
+    2:
+      chance: 50
+      cooldown: 3
+      effects:
+        - 'POTION:INCREASE_DAMAGE:0:100 @Attacker'
+        - 'POTION:SPEED:0:100 @Attacker'
+    3:
+      chance: 100
+      cooldown: 3
+      effects:
+        - 'POTION:INCREASE_DAMAGE:1:100 @Attacker'
+        - 'POTION:SPEED:1:100 @Attacker'
+experent:
+  display: '%group-color%Experent'
+  description: 'Gain increased xp from killing mobs'
+  applies-to: 'Swords'
+  type: 'KILL_MOB'
+  group: 'LEGENDARY'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    '1':
+      chance: 100
+      effects:
+        - 'EXP:<random number>2-6</random number>'
+    '2':
+      chance: 100
+      effects:
+        - 'EXP:<random number>3-7</random number>'
+    '3':
+      chance: 100
+      effects:
+        - 'EXP:<random number>4-8</random number>'
+    '4':
+      chance: 100
+      effects:
+        - 'EXP:<random number>5-9</random number>'
+    '5':
+      chance: 100
+      effects:
+        - 'EXP:<random number>6-15</random number>'
+judgement:
+  display: '%group-color%Judgement'
+  description: 'Chance to give a player poison while gaining regeneration when you hit them'
+  applies-to: 'Swords'
+  group: 'LEGENDARY'
+  type: 'ATTACK'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    '1':
+      chance: 1
+      cooldown: 5
+      effects:
+        - 'POTION:POISON:0:80 @Victim'
+        - 'POTION:REGENERATION:0:80 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Judgement &7enchant gave &c%victim name% {#00FB8A}Poison while gaining {#00FB8A}Regeneration&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Poison&7 with the enchant {#00FB8A}Judgement&7! @Victim
+    '2':
+      chance: 2.5
+      cooldown: 5
+      effects:
+        - 'POTION:POISON:0:80 @Victim'
+        - 'POTION:REGENERATION:0:80 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Judgement &7enchant gave &c%victim name% {#00FB8A}Poison while gaining {#00FB8A}Regeneration&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Poison&7 with the enchant {#00FB8A}Judgement&7! @Victim
+    '3':
+      chance: 3
+      cooldown: 5
+      effects:
+        - 'POTION:POISON:0:80 @Victim'
+        - 'POTION:REGENERATION:0:80 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Judgement &7enchant gave &c%victim name% {#00FB8A}Poison while gaining {#00FB8A}Regeneration&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Poison&7 with the enchant {#00FB8A}Judgement&7! @Victim
+    '4':
+      chance: 5
+      cooldown: 5
+      effects:
+        - 'POTION:POISON:0:80 @Victim'
+        - 'POTION:REGENERATION:0:80 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Judgement &7enchant gave &c%victim name% {#00FB8A}Poison while gaining {#00FB8A}Regeneration&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Poison&7 with the enchant {#00FB8A}Judgement&7! @Victim
+    '5':
+      chance: 5.5
+      cooldown: 5
+      effects:
+        - 'POTION:POISON:1:80 @Victim'
+        - 'POTION:REGENERATION:1:80 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Judgement &7enchant gave &c%victim name% {#00FB8A}Poison II &7while gaining {#00FB8A}Regeneration II&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Poison II&7 with the enchant {#00FB8A}Judgement&7! @Victim
+rebound:
+  display: '%group-color%Rebound'
+  description: 'Gain some health back after player kills'
+  applies-to: 'SWORDS'
+  type: 'KILL_PLAYER'
+  group: 'LEGENDARY'
+  applies:
+    - ALL_SWORD
+  levels:
+    '1':
+      chance: 100
+      cooldown: 5
+      effects:
+        - 'ADD_HEALTH:2 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Rebound &7enchant gave you health for killing &c%victim name%&7! @Attacker
+    '2':
+      chance: 100
+      cooldown: 5
+      effects:
+        - 'ADD_HEALTH:4 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Rebound &7enchant gave you health for killing &c%victim name%&7! @Attacker
+    '3':
+      chance: 100
+      cooldown: 5
+      effects:
+        - 'ADD_HEALTH:6 @Attacker'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Rebound &7enchant gave you health for killing &c%victim name%&7! @Attacker
+demise:
+  display: '%group-color%Demise'
+  description: "Increased damage dealt when\nenemy is near death"
+  applies-to: 'Sword'
+  type: 'ATTACK'
+  group: 'legendary'
+  applies:
+    - ALL_SWORD
+  levels:
+    1:
+      chance: 7
+      cooldown: 7
+      condition: '%victim health% < 4 : %continue%'
+      effects:
+        - 'INCREASE_DAMAGE:<random number>10-35</random number>'
+    2:
+      chance: 11
+      cooldown: 7
+      condition: '%victim health% < 4 : %continue%'
+      effects:
+        - 'INCREASE_DAMAGE:<random number>10-35</random number>'
+    3:
+      chance: 15
+      cooldown: 7
+      condition: '%victim health% < 4 : %continue%'
+      effects:
+        - 'INCREASE_DAMAGE:<random number>10-35</random number>'
+rivalry:
+  display: '%group-color%Rivalry'
+  description: "Deal more damage to the enemy when\nthey are wielding the opposite weapon"
+  applies-to: 'Weapon'
+  type: 'ATTACK'
+  group: 'legendary'
+  applies:
+    - ALL_SWORD
+    - ALL_AXE
+  levels:
+    1:
+      chance: 25
+      cooldown: 3
+      condition:
+      - '%victim is holding% contains SWORD && %attacker is holding% contains AXE : %allow%'
+      - '%victim is holding% contains AXE && %attacker is holding% contains SWORD : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE'
+    2:
+      chance: 50
+      cooldown: 2
+      condition:
+      - '%victim is holding% contains SWORD && %attacker is holding% contains AXE : %allow%'
+      - '%victim is holding% contains AXE && %attacker is holding% contains SWORD : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE'
+    3:
+      chance: 65
+      cooldown: 1
+      condition:
+      - '%victim is holding% contains SWORD && %attacker is holding% contains AXE : %allow%'
+      - '%victim is holding% contains AXE && %attacker is holding% contains SWORD : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE'
+backstab:
+  display: '%group-color%Backstab'
+  description: 'Gain an increase in damage dealt\nwhen hitting an enemy from behind'
+  applies-to: 'Swords'
+  group: 'ELITE'
+  type: 'ATTACK;ATTACK_MOB'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    '1':
+      condition:
+        - '%damage from behind% = TRUE : %continue%'
+      chance: 1
+      effects:
+        - 'INCREASE_DAMAGE:<random number>5-10</random number>'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Backstabed &c%victim name%&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% {#00FB8A}Backstabed &7you! @Victim
+    '2':
+      condition:
+        - '%damage from behind% = TRUE : %continue%'
+      chance: 2
+      effects:
+        - 'INCREASE_DAMAGE:<random number>10-15</random number>'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Backstabed &c%victim name%&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% {#00FB8A}Backstabed &7you! @Victim
+    '3':
+      condition:
+        - '%damage from behind% = TRUE : %continue%'
+      chance: 3
+      effects:
+        - 'INCREASE_DAMAGE:<random number>10-15</random number>'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Backstabed &c%victim name%&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% {#00FB8A}Backstabed &7you! @Victim
+    '4':
+      condition:
+        - '%damage from behind% = TRUE : %continue%'
+      chance: 4
+      effects:
+        - 'INCREASE_DAMAGE:<random number>10-25</random number>'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Backstabed &c%victim name%&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% {#00FB8A}Backstabed &7you! @Victim
+    '5':
+      condition:
+        - '%damage from behind% = TRUE : %continue%'
+      chance: 4
+      effects:
+        - 'INCREASE_DAMAGE:<random number>10-35</random number>'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7You {#00FB8A}Backstabed &c%victim name%&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% {#00FB8A}Backstabed &7you! @Victim
+critical:
+  display: '%group-color%Critical'
+  description: 'Chance to do double the damage when you crit someone'
+  applies-to: 'Swords'
+  group: 'ELITE'
+  type: 'ATTACK;ATTACK_MOB'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    '1':
+      chance: 15
+      cooldown: 1
+      condition:
+        - '%is critical% =true : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE @Victim'
+    '2':
+      chance: 25
+      cooldown: 1
+      condition:
+        - '%is critical% =true : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE @Victim'
+    '3':
+      chance: 50
+      cooldown: 1
+      condition:
+        - '%is critical% =true : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE @Victim'
+taintedweb:
+  display: '%group-color%Tainted Web'
+  description: 'Chance to give a player slowness when you hit them'
+  applies-to: 'Swords'
+  group: 'ELITE'
+  type: 'ATTACK'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    '1':
+      chance: 0.9
+      cooldown: 5
+      effects:
+        - 'POTION:SLOW:0:100 @Victim'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Tainted Web &7enchant gave &c%victim name% {#00FB8A}Slowness&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Slowness&7 with the enchant {#00FB8A}Tainted Web&7! @Victim
+    '2':
+      chance: 1.3
+      cooldown: 5
+      effects:
+        - 'POTION:SLOW:0:100 @Victim'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Tainted Web &7enchant gave &c%victim name% {#00FB8A}Slowness&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Slowness&7 with the enchant {#00FB8A}Tainted Web&7! @Victim
+    '3':
+      chance: 2.2
+      cooldown: 5
+      effects:
+        - 'POTION:SLOW:0:100 @Victim'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Tainted Web &7enchant gave &c%victim name% {#00FB8A}Slowness&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Slowness&7 with the enchant {#00FB8A}Tainted Web&7! @Victim
+blindingstrike:
+  display: '%group-color%Blinding Strike'
+  description: 'Chance to give player blindness effect when you hit someone'
+  applies-to: 'Swords'
+  group: 'ELITE'
+  type: 'ATTACK'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    '1':
+      chance: 0.6
+      cooldown: 5
+      effects:
+        - 'POTION:BLINDNESS:0:100 @Victim'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Blinding Strike &7enchant gave &c%victim name% {#00FB8A}Blindness&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Blindness&7 with the enchant {#00FB8A}Blinding Strike&7! @Victim
+    '2':
+      chance: 0.9
+      cooldown: 5
+      effects:
+        - 'POTION:BLINDNESS:0:100 @Victim'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Blinding Strike &7enchant gave &c%victim name% {#00FB8A}Blindness&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Blindness&7 with the enchant {#00FB8A}Blinding Strike&7! @Victim
+    '3':
+      chance: 1.3
+      cooldown: 5
+      effects:
+        - 'POTION:BLINDNESS:0:100 @Victim'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Blinding Strike &7enchant gave &c%victim name% {#00FB8A}Blindness&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Blindness&7 with the enchant {#00FB8A}Blinding Strike&7! @Victim
+famine:
+  display: '%group-color%Famine'
+  description: 'A chance to give your opponent the hunger effect.'
+  applies-to: 'Swords'
+  type: 'ATTACK'
+  group: 'elite'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    '1':
+      chance: 1
+      cooldown: 8
+      effects:
+        - POTION:HUNGER:0:80 @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Famine &7enchant gave &c%victim name% {#00FB8A}Extreme Hunger&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Extreme Hunger&7 with the enchant {#00FB8A}Famine&7! @Victim
+    '2':
+      chance: 3
+      cooldown: 8
+      effects:
+        - POTION:HUNGER:0:100 @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Famine &7enchant gave &c%victim name% {#00FB8A}Extreme Hunger&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Extreme Hunger&7 with the enchant {#00FB8A}Famine&7! @Victim
+    '3':
+      chance: 1
+      cooldown: 8
+      effects:
+        - POTION:HUNGER:1:80 @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Famine &7enchant gave &c%victim name% {#00FB8A}Extreme Hunger&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Extreme Hunger&7 with the enchant {#00FB8A}Famine&7! @Victim
+    '4':
+      chance: 3
+      cooldown: 8
+      effects:
+        - POTION:HUNGER:1:100 @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Famine &7enchant gave &c%victim name% {#00FB8A}Extreme Hunger&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Extreme Hunger&7 with the enchant {#00FB8A}Famine&7! @Victim
+    '5':
+      chance: 5
+      cooldown: 8
+      effects:
+        - POTION:HUNGER:2:100 @Victim
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Famine &7enchant gave &c%victim name% {#00FB8A}Extreme Hunger&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Extreme Hunger&7 with the enchant {#00FB8A}Famine&7! @Victim
+retaliate:
+  display: '%group-color%Retaliate'
+  description: 'Chance to give a player wither effect when you hit them'
+  applies-to: 'Swords'
+  group: 'ELITE'
+  type: 'ATTACK'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    '1':
+      chance: 0.8
+      cooldown: 5
+      effects:
+        - 'POTION:WITHER:0:100 @Victim'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Retaliate &7enchant gave &c%victim name% {#00FB8A}Wither&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Wither&7 with the enchant {#00FB8A}Retaliate&7! @Victim
+    '2':
+      chance: 1.3
+      cooldown: 5
+      effects:
+        - 'POTION:WITHER:0:100 @Victim'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Retaliate &7enchant gave &c%victim name% {#00FB8A}Wither&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Wither&7 with the enchant {#00FB8A}Retaliate&7! @Victim
+    '3':
+      chance: 1.7
+      cooldown: 5
+      effects:
+        - 'POTION:WITHER:0:100 @Victim'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Retaliate &7enchant gave &c%victim name% {#00FB8A}Wither&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Wither&7 with the enchant {#00FB8A}Retaliate&7! @Victim
+    '4':
+      chance: 2.3
+      cooldown: 5
+      effects:
+        - 'POTION:WITHER:0:100 @Victim'
+        - MESSAGE:{#00FB8A}&lEnchants &8» &7Your {#00FB8A}Retaliate &7enchant gave &c%victim name% {#00FB8A}Wither&7! @Attacker
+        - MESSAGE:{#00FB8A}&lEnchants &8» &c%attacker name% &7gave you {#00FB8A}Wither&7 with the enchant {#00FB8A}Retaliate&7! @Victim
+vanquish:
+  display: '%group-color%Vanquish'
+  description: 'Chance to prevent your enemys Valiant enchant from activating'
+  applies-to: 'Swords'
+  group: 'legendary'
+  type: 'ATTACK'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    '1':
+      chance: 0.9
+      cooldown: 5
+      effects:
+        - 'DISABLE_ACTIVATION:valiant:10'
+    '2':
+      chance: 1.2
+      cooldown: 5
+      effects:
+        - 'DISABLE_ACTIVATION:valiant:10'
+    '3':
+      chance: 2.4
+      cooldown: 5
+      effects:
+        - 'DISABLE_ACTIVATION:valiant:10'
+    '4':
+      chance: 3
+      cooldown: 5
+      effects:
+        - 'DISABLE_ACTIVATION:valiant:10'
+ravenous:
+  display: '%group-color%Ravenous'
+  description: 'Chance to gain hunger when you kill a player'
+  applies-to: 'Swords'
+  type: 'KILL_PLAYER'
+  group: 'Elite'
+  applies:
+    - ALL_SWORD
+  levels:
+    '1':
+      chance: 14
+      cooldown: 2
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> @Attacker'
+    '2':
+      chance: 18
+      cooldown: 2
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> @Attacker'
+    '3':
+      chance: 22
+      cooldown: 2
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> @Attacker'
+    '4':
+      chance: 26
+      cooldown: 2
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> @Attacker'
+devour:
+  display: '%group-color%Devour'
+  description: 'Chance to regain your hunger by killing mobs'
+  applies-to: 'Swords, Axes'
+  type: 'ATTACK_MOB'
+  group: 'SIMPLE'
+  applies:
+    - ALL_SWORD
+    - ALL_AXE
+  levels:
+    '1':
+      chance: 25
+      cooldown: 3
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> @Attacker'
+    '2':
+      chance: 50
+      cooldown: 3
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> @Attacker'
+    '3':
+      chance: 100
+      cooldown: 3
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> @Attacker'
+featherweight:
+  display: '%group-color%Feather Weight'
+  description: 'Chance to gain haste while killing mobs or players '
+  applies-to: 'Swords'
+  type: 'ATTACK_MOB'
+  group: 'Simple'
+  applies:
+    - ALL_SWORD
+  levels:
+    '1':
+      chance: 5
+      cooldown: 3
+      effects:
+        - 'POTION:HASTE:2:60'
+    '2':
+      chance: 15
+      cooldown: 3
+      effects:
+        - 'POTION:HASTE:2:120'
+    '3':
+      chance: 25
+      cooldown: 3
+      effects:
+        - 'POTION:HASTE:2:180'
+sniper:
+  display: '%group-color%Sniper'
+  description: 'Chance for headshots to do Double the damage'
+  applies-to: 'Bow'
+  type: 'SHOOT;SHOOT_MOB'
+  group: 'Legendary'
+  applies:
+    - BOW
+  levels:
+    '1':
+      chance: 15
+      cooldown: 5
+      conditions:
+        - '%is headshot% = true : %allow%'
+      effects:
+        - 'INCREASE_DAMAGE:100 @Victim'
+    '2':
+      chance: 20
+      cooldown: 5
+      conditions:
+        - '%is headshot% = true : %allow%'
+      effects:
+        - 'INCREASE_DAMAGE:100 @Victim'
+    '3':
+      chance: 25
+      cooldown: 5
+      conditions:
+        - '%is headshot% = false : %stop%'
+      effects:
+        - 'INCREASE_DAMAGE:100 @Victim'
+    '4':
+      chance: 30
+      cooldown: 5
+      conditions:
+        - '%is headshot% = false : %stop%'
+      effects:
+        - 'INCREASE_DAMAGE:100 @Victim'
+    '5':
+      chance: 35
+      cooldown: 5
+      conditions:
+        - '%is headshot% = false : %stop%'
+      effects:
+        - 'INCREASE_DAMAGE:100 @Victim'
+striker:
+  display: '%group-color%Striker'
+  description: 'Chance to rain arrows over opponent'
+  applies-to: 'Bow'
+  type: 'SHOOT;SHOOT_MOB'
+  group: 'LEGENDARY'
+  applies:
+    - BOW
+  levels:
+    '1':
+      chance: 15
+      cooldown: 6
+      effects:
+        - 'SPAWN_ARROWS @Victim'
+    '2':
+      chance: 18
+      cooldown: 6
+      effects:
+        - 'SPAWN_ARROWS @Victim'
+    '3':
+      chance: 22
+      cooldown: 6
+      effects:
+        - 'SPAWN_ARROWS @Victim'
+hellfire:
+  display: '%group-color%Hellfire'
+  description: 'Chance for arrows turn into fireballs'
+  applies-to: 'Bow'
+  type: 'SHOOT;SHOOT_MOB'
+  group: 'LEGENDARY'
+  applies:
+    - BOW
+  levels:
+    '1':
+      chance: 10
+      cooldown: 3
+      effects:
+        - 'FIREBALL @Victim'
+    '2':
+      chance: 25
+      cooldown: 3
+      effects:
+        - 'FIREBALL @Victim'
+    '3':
+      chance: 35
+      cooldown: 3
+      effects:
+        - 'FIREBALL @Victim'
+    '4':
+      chance: 50
+      cooldown: 3
+      effects:
+        - 'FIREBALL @Victim'
+    '5':
+      chance: 70
+      cooldown: 3
+      effects:
+        - 'FIREBALL @Victim'
+virus:
+  display: '%group-color%Virus'
+  description: 'A chance of giving poison effect'
+  applies-to: 'Bow'
+  type: 'SHOOT_MOB;SHOOT'
+  group: 'ELITE'
+  applies:
+    - BOW
+  levels:
+    '1':
+      chance: 6
+      cooldown: 5
+      effects:
+        - 'POTION:POISON:0:80 @Victim'
+    '2':
+      chance: 22
+      cooldown: 5
+      effects:
+        - 'POTION:POISON:0:120 @Victim'
+    '3':
+      chance: 35
+      cooldown: 5
+      effects:
+        - 'POTION:POISON:1:80 @Victim'
+perish:
+  display: '%group-color%Perish'
+  description: 'A chance to give the wither effect'
+  applies-to: 'Bow'
+  type: 'SHOOT;SHOOT_MOB'
+  group: 'ELITE'
+  applies:
+    - BOW
+  levels:
+    '1':
+      chance: 9
+      cooldown: 3
+      effects:
+        - 'POTION:WITHER:0:100 @Victim'
+    '2':
+      chance: 11
+      cooldown: 3
+      effects:
+        - 'POTION:WITHER:0:100 @Victim'
+    '3':
+      chance: 14
+      cooldown: 3
+      effects:
+        - 'POTION:WITHER:0:100 @Victim'
+    '4':
+      chance: 17
+      cooldown: 3
+      effects:
+        - 'POTION:WITHER:1:100 @Victim'
+    '5':
+      chance: 21
+      cooldown: 3
+      effects:
+        - 'POTION:WITHER:1:100 @Victim'
+impale:
+  display: '%group-color%Impale'
+  description: 'A chance to give the slowness effect'
+  applies-to: 'Bow'
+  type: 'SHOOT;SHOOT_MOB'
+  group: 'ELITE'
+  applies:
+    - BOW
+  levels:
+    '1':
+      chance: 9
+      cooldown: 3
+      effects:
+        - 'POTION:SLOW:0:100 @Victim'
+    '2':
+      chance: 11
+      cooldown: 3
+      effects:
+        - 'POTION:SLOW:0:100 @Victim'
+    '3':
+      chance: 14
+      cooldown: 3
+      effects:
+        - 'POTION:SLOW:0:100 @Victim'
+    '4':
+      chance: 17
+      cooldown: 3
+      effects:
+        - 'POTION:SLOW:1:100 @Victim'
+queasinessarrow:
+  display: '%group-color%Queasiness Arrow'
+  description: 'A chance to give the nausea effect'
+  applies-to: 'Bow'
+  type: 'SHOOT;SHOOT_MOB'
+  group: 'ELITE'
+  applies:
+    - BOW
+  levels:
+    '1':
+      chance: 9
+      cooldown: 3
+      effects:
+        - 'POTION:CONFUSION:0:100 @Victim'
+    '2':
+      chance: 11
+      cooldown: 3
+      effects:
+        - 'POTION:CONFUSION:0:100 @Victim'
+    '3':
+      chance: 14
+      cooldown: 3
+      effects:
+        - 'POTION:CONFUSION:1:100 @Victim'
+timber:
+  display: '%group-color%Timber'
+  description: 'Chance to break a tree in one hit'
+  applies-to: 'Axes'
+  group: 'ELITE'
+  type: 'MINING'
+  applies:
+    - ALL_AXE
+  levels:
+    '1':
+      chance: 25
+      effects:
+        - 'BREAK_TREE @Block'
+    '2':
+      chance: 50
+      effects:
+        - 'BREAK_TREE @Block'
+    '3':
+      chance: 100
+      effects:
+        - 'BREAK_TREE @Block'
+veinminer:
+  display: '%group-color%Vein Miner'
+  description: Mine entire vein of ores
+  applies-to: Pickaxes
+  group: GODLY
+  type: MINING
+  applies:
+    - ALL_PICKAXE
+  levels:
+    '1':
+      settings:
+        whitelist:
+          - "COAL_ORE"
+          - "COPPER_ORE"
+          - "IRON_ORE"
+          - "GOLD_ORE"
+          - "LAPIS_ORE"
+          - "REDSTONE_ORE"
+          - "DIAMOND_ORE"
+          - "EMERALD_ORE"
+          - "NETHER_QUARTZ_ORE"
+          - "NETHER_GOLD_ORE"
+          - "ANCIENT_DEBRIS"
+          - "DEEPSLATE_COAL_ORE"
+          - "DEEPSLATE_COPPER_ORE"
+          - "DEEPSLATE_IRON_ORE"
+          - "DEEPSLATE_GOLD_ORE"
+          - "DEEPSLATE_LAPIS_ORE"
+          - "DEEPSLATE_REDSTONE_ORE"
+          - "DEEPSLATE_DIAMOND_ORE"
+          - "DEEPSLATE_EMERALD_ORE"
+      effects:
+        - BREAK_BLOCK @Veinmine
+telepathy:
+  display: '%group-color%Telepathy'
+  description: |-
+    Automatically places blocks broken
+    by tools in your inventory.
+  applies-to: Tools
+  type: MINING
+  group: GODLY
+  applies:
+    - ALL_TOOLS
+  levels:
+    '1':
+      chance: 100
+      effects:
+        - TP_DROPS @Block
